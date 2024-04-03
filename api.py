@@ -44,8 +44,8 @@ def getAlo():
     return jsonify({'alo': 'alo'}), 200
 
 if __name__ == '__main__':
-    # port = int(os.environ.get('PORT', 33507))  # Get the port from environment variables, default to 5000 if not specified
-    # app.run(debug=True, port=port)
+    port = int(os.environ.get('PORT', 5000))  # Get the port from environment variables, default to 5000 if not specified
+    app.run(debug=True, port=port)
     app.run(debug=True)
     
 
