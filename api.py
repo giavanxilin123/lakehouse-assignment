@@ -1,5 +1,5 @@
 import boto3
-from gevent.pywsgi import WSGIServer
+# from gevent.pywsgi import WSGIServer
 
 from flask import Flask, jsonify, request
 
