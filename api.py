@@ -1,4 +1,5 @@
 import boto3
+import os
 # from gevent.pywsgi import WSGIServer
 
 from flask import Flask, jsonify, request
@@ -46,5 +47,8 @@ def getAlo():
     return jsonify({'alo': 'alo'}), 200
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 33507))  # Get the port from environment variables, default to 5000 if not specified
+    app.run(debug=True, port=port)
+    
+
 
