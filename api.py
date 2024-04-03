@@ -36,10 +36,13 @@ app = Flask(__name__)
 
 #     except Exception as e:
         # return jsonify({'error': str(e)}), 500
-    
-@app.route('/alo', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get():
     return jsonify({'hi': 'hi'}), 200
+ 
+@app.route('/alo', methods=['GET'])
+def getAlo():
+    return jsonify({'alo': 'alo'}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
